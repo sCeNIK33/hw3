@@ -28,13 +28,14 @@ function pageLoad() {
   let passenger3 = ride[2]
   
   levelOfService = ('Noober X', 'Noober Purple', 'Noober XL', 'Noober Pool')
-  if (ride.length > 1 || passenger1.numberOfPassengers == 1) {
+  if (ride.length > 2 || passenger1.numberOfPassengers == 1) {
     levelOfService = 'Noober Pool'
-  } else if (ride.purplerequested == true) {
+  } else if (passenger1.purplerequested = true || passenger1.numberOfPassengers < 3) {
     levelOfService = 'Noober Purple'
-  } else if (ride.numberOfPassenger > 3 ) {
+  } else if (passenger1.numberOfPassenger > 3 ) {
     levelOfService = 'Noober XL'
   } else {levelOfService = 'Noober X'}
+  
   console.log(levelOfService)
 
   passenger1Name = passenger1.passengerDetails.first + ' ' + passenger1.passengerDetails.last
