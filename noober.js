@@ -30,7 +30,7 @@ function pageLoad() {
   levelOfService = ('Noober X', 'Noober Purple', 'Noober XL', 'Noober Pool')
   if (ride.length > 1 || passenger1.numberOfPassengers == 1) {
     levelOfService = 'Noober Pool'
-  } else if (ride.purplerequested = true) {
+  } else if (ride.purplerequested == true) {
     levelOfService = 'Noober Purple'
   } else if (ride.numberOfPassenger > 3 ) {
     levelOfService = 'Noober XL'
