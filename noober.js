@@ -23,18 +23,36 @@ function pageLoad() {
   // passenger3PickupAddressLine1, passenger3PickupAddressLine2
   // passenger3DropoffAddressLine1, passenger3DropoffAddressLine2
   
-  let passenger1 = ride[0]
-  let passenger2 = ride[1]
-  let passenger3 = ride[2]
-  
   levelOfService = ('Noober X', 'Noober Purple', 'Noober XL', 'Noober Pool')
   if (ride.length > 1) {
     levelOfService = 'Noober Pool'
-  } else if (ride.purpleRequested == true && passenger1.numberOfPassengers <= 3) {
+  } else if (ride[0].purpleRequested == true) {
     levelOfService = 'Noober Purple'
-  } else if (ride.numberOfPassengers >= 4) {
+  } else if (ride[0].numberOfPassengers > 3) {
     levelOfService = 'Noober XL'
-  } else {levelOfService = 'Noober X'}
+  } else {
+    levelOfService = 'Noober X'
+  }
+
+  //levelOfService = ('Noober X', 'Noober Purple', 'Noober XL', 'Noober Pool')
+  //if (ride.length > 1 || ride[0].numberOfPassengers == 1) {
+  //  levelOfService = 'Noober Pool'
+  //} else if (ride[0].purpleRequested == true) {
+  //  levelOfService = 'Noober Purple'
+  //} else if (ride[0].numberOfPassengers > 3) {
+  //  levelOfService = 'Noober XL'
+  //} else {
+  //  levelOfService = 'Noober X'
+  //}
+
+  //levelOfService = ('Noober X', 'Noober Purple', 'Noober XL', 'Noober Pool')
+  //if (ride.length > 1) {
+  //  levelOfService = 'Noober Pool'
+  //} else if (ride.purpleRequested == true && passenger1.numberOfPassengers <= 3) {
+  //  levelOfService = 'Noober Purple'
+  //} else if (ride.numberOfPassengers >= 4) {
+  //  levelOfService = 'Noober XL'
+  //} else {levelOfService = 'Noober X'}
   
   //levelOfService = ('Noober X', 'Noober Purple', 'Noober XL', 'Noober Pool')
   //if (ride.length > 1 && passenger1.numberOfPassengers == 1) {
@@ -46,6 +64,10 @@ function pageLoad() {
   //} else {levelOfService = 'Noober X'}
   
   console.log(levelOfService)
+
+  let passenger1 = ride[0]
+  let passenger2 = ride[1]
+  let passenger3 = ride[2]
 
   passenger1Name = passenger1.passengerDetails.first + ' ' + passenger1.passengerDetails.last
   console.log(passenger1Name)
