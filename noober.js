@@ -108,9 +108,3 @@ function pageLoad() {
   //  👆 YOUR CODE ENDS HERE. DON'T CHANGE ANY OTHER CODE 👆
 }
 
-
-
-
-//let rando1 = ride[getRandomInt(ride.length)]
-//let rando2 = ride[getRandomInt(ride.length)]
-//let rando3 = ride[getRandomInt(ride.length)]
